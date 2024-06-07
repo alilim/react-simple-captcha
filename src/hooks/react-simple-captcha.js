@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import ReactHtmlParser from 'react-html-parser';
+import parse from 'html-react-parser';
 
 let captcha_value = '';
 let captcha_number = '';
@@ -127,7 +127,7 @@ export class LoadCanvasTemplate extends Component {
 
         LoadCanvasTemplate_HTML = "<div><canvas id=\"canv\"></canvas><div><a id=\"reload_href\"  style=\"cursor: pointer; color: " + reload_color + "\">" + reload_text + "</a></div></div>";
 
-        return (ReactHtmlParser(LoadCanvasTemplate_HTML));
+        return (parse(LoadCanvasTemplate_HTML));
     }
 
 };
@@ -135,7 +135,7 @@ export class LoadCanvasTemplate extends Component {
 export class LoadCanvasTemplateNoReload extends Component {
 
     render() {
-        return (ReactHtmlParser(LoadCanvasTemplateNoReload_HTML));
+        return (parse(LoadCanvasTemplateNoReload_HTML));
     }
 
 };
